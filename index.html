@@ -1,30 +1,690 @@
----
-layout: default
-robots: noindex
----
+it <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<div class="main-post-list">
+    <title>Suresh Reddy</title>
+    <meta content="" name="descriptison" />
+    <meta content="" name="keywords" />
 
-  <ol class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-        <p class="excerpt">{{ post.excerpt | strip_html }}&hellip;</p>
-        <div class="post-list__meta">
-            <time datetime="{{ post.date | date: "%-d %b %Y" }}" class="post-list__meta--date date">{{ post.date | date: "%-d %b %Y" }}</time>
-            {% if post.tags.size > 0 %}
-            &#8226; <span class="post-meta__tags">on {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span>
-            {% endif %}
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none">
+      <i class="icofont-navigation-menu"></i>
+    </button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+      <nav class="nav-menu">
+        <ul>
+          <li class="active">
+            <a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a>
+          </li>
+          <li>
+            <a href="#about"><i class="bx bx-user"></i> <span>About</span></a>
+          </li>
+          <li>
+            <a href="#skills"
+              ><i class="bx bx-book-content"></i> <span>Skills</span></a
+            >
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+    </header>
+    <!-- End Header -->
+
+    <section id="hero" class="d-flex flex-column justify-content-center">
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Suresh Reddy</h1>
+        <p>
+          I'm
+          <span
+            class="typed"
+            data-typed-items="a React developer, an AWS DevOps Professional, a Full Stack enthusiast"
+          ></span>
+        </p>
+        <div class="social-links">
+          <a href="https://github.com/Mr-SKR" class="github" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/suresh-kumar-reddy/"
+            class="linkedin"
+            target="_blank"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/suresh.kumar.reddy/"
+            class="instagram"
+            target="_blank"
+            ><i class="bx bxl-instagram"></i
+          ></a>
         </div>
-        <hr class="post-list__divider">
-      </li>
-    {% endfor %}
-  </ol>
+      </div>
+    </section>
 
-  <hr class="post-list__divider ">
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>About</h2>
+            <q
+              cite="https://en.wikipedia.org/wiki/Dennis_Ritchie"
+              class="font-italic"
+              >I fix things now and then, more often tweak HTML and make scripts
+              to do things.</q
+            >
+            <h6>- Dennis MacAlistair Ritchie</h6>
+          </div>
 
-  {% if paginator.previous_page or paginator.next_page %}
-      {% include pagination.html %}
-  {% endif %}
+          <div class="row">
+            <div class="col-lg-4">
+              <img
+                src="assets/img/profile.jpg"
+                class="img-fluid"
+                alt="my-profile-picture"
+              />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content">
+              <div class="pb-5">
+                <p style="text-align: center">
+                  I am a technology enthusiast. My interest lies in front-end,
+                  back-end development and application deployment. Although I
+                  have learned a bit of all these technologies, I have also
+                  realized that I still have a lot to learn
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="icofont-rounded-right"></i>
+                      <strong>Website:</strong>
+                      <a href="https://mr-skr.github.io/"> mr-skr.github.io/</a>
+                    </li>
+                    <li>
+                      <i class="icofont-rounded-right"></i>
+                      <strong>Birthday:</strong> 22 January 1996
+                    </li>
+                    <li>
+                      <i class="icofont-rounded-right"></i>
+                      <strong>City:</strong> Bengaluru, India
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="icofont-rounded-right"></i>
+                      <strong>Phone:</strong>
+                      <a href="tel:+91 7483006036"> +91 7483006036</a>
+                    </li>
+                    <li>
+                      <i class="icofont-rounded-right"></i>
+                      <strong>Email:</strong
+                      ><a href="mailto:sureshreddy@engineer.com">
+                        sureshreddy@engineer.com</a
+                      >
+                    </li>
+                    <li>
+                      <i class="icofont-rounded-right"></i>
+                      <strong>Degree:</strong> Bachelor's in Engineering (ISE)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center skills-content mt-5">
+              <div
+                class="col logo mx-lg-5"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                  alt="AWS Certified DevOps Engineer – Professional"
+                  class="img-circle cert-img-placeholder"
+                  style="width: 100%"
+                />
+              </div>
+              <div
+                class="col logo mx-lg-5"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <a
+                  href="https://www.youracclaim.com/badges/b119ea5a-0165-4597-8738-6dfabe4ebb0e/public_url"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/img/certs/AWS-DevOpsEngineer-Professional.png"
+                    alt="AWS Certified DevOps Engineer – Professional"
+                    class="img-circle"
+                    style="width: 100%"
+                  />
+                </a>
+              </div>
+              <div
+                class="col logo mx-lg-5"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                  alt="AWS Certified DevOps Engineer – Professional"
+                  class="img-circle cert-img-placeholder"
+                  style="width: 100%"
+                />
+              </div>
 
-</div>
+              <div class="row align-items-center skills-content mt-5">
+                <div
+                  class="col logo mx-lg-5"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
+                  <a
+                    href="https://www.youracclaim.com/badges/531fa23b-f013-4b36-89ff-e7fec1eee2c5/public_url"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/img/certs/AWS-Developer-Associate.png"
+                      alt="AWS Certified Developer – Associate"
+                      class="img-circle"
+                      style="width: 100%"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col logo mx-lg-5"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
+                  <a
+                    href="https://www.youracclaim.com/badges/416a7e69-cc65-46aa-8a95-0d5db1976187/public_url"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/img/certs/AWS-SolArchitect-Associate.png"
+                      alt="AWS Certified Solutions Architect – Associate"
+                      class="img-circle"
+                      style="width: 100%"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col logo mx-lg-5"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
+                  <a
+                    href="https://www.credly.com/badges/84afe5a3-d00f-4e5e-a414-8701d4b13431/public_url"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/img/certs/AWS-SysOpAdmin-Associate-2020.png"
+                      alt="AWS Certified SysOps Administrator – Associate"
+                      class="img-circle"
+                      style="width: 100%"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Skills Section ======= -->
+      <section id="skills" class="skills section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Skills</h2>
+            <p>
+              There are over 700 programming languages in this wild world. I am
+              friends with few and acquaintances with some
+            </p>
+          </div>
+
+          <div class="row align-items-center skills-content my-5">
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://reactjs.org/" target="_blank">
+                <img
+                  src="assets/img/skills/react-logo.png"
+                  alt="React"
+                  class="img-circle"
+                  style="width: 100%"
+                />
+              </a>
+            </div>
+            <div
+              class="col logo mx-lg-5 center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://www.typescriptlang.org/" target="_blank">
+                <img
+                  src="assets/img/skills/typescript-logo.png"
+                  alt="TypeScript"
+                  class="img-circle"
+                  style="width: 30%"
+                />
+              </a>
+            </div>
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://nodejs.org/en/" target="_blank">
+                <img
+                  src="assets/img/skills/node-js-logo.png"
+                  alt="NodeJS"
+                  class="img-circle"
+                  style="width: 100%"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="row align-items-center skills-content mb-5">
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://aws.amazon.com/" target="_blank">
+                <img
+                  src="assets/img/skills/aws-logo.png"
+                  alt="AWS"
+                  class="img-circle"
+                  style="width: 100%"
+                />
+              </a>
+            </div>
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://devops.com/" target="_blank">
+                <img
+                  src="assets/img/skills/devops-logo.png"
+                  alt="DevOps"
+                  class="img-circle"
+                  style="width: 60%"
+                />
+              </a>
+            </div>
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://www.python.org/" target="_blank">
+                <img
+                  src="assets/img/skills/python-logo.jpg"
+                  alt="Python"
+                  class="img-circle"
+                  style="width: 100%"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="row align-items-center skills-content mt-5">
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://www.docker.com/" target="_blank">
+                <img
+                  src="assets/img/skills/docker-logo.jpg"
+                  alt="Docker"
+                  class="img-circle"
+                  style="width: 100%"
+                />
+              </a>
+            </div>
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://kubernetes.io/" target="_blank">
+                <img
+                  src="assets/img/skills/k8s-logo.png"
+                  alt="Kubernetes"
+                  class="img-circle"
+                  style="width: 100%"
+                />
+              </a>
+            </div>
+            <div
+              class="col logo mx-lg-5"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a href="https://git-scm.com/" target="_blank">
+                <img
+                  src="assets/img/skills/git-logo.png"
+                  alt="Git"
+                  class="img-circle"
+                  style="width: 100%"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Skills Section -->
+
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Resume</h2>
+            <p></p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>
+                  Software Engineer III @
+                  <a href="https://www.cerner.com/">Oracle Cerner</a>
+                </h4>
+                <h5>November, 2021 - Present</h5>
+                <p><em> Manyata Tech Park, Bengaluru, India </em></p>
+                <ul>
+                  <li>
+                    Worked with cloud business office to build and enhance an
+                    internal webapplication to track, log and facilitate cloud
+                    requests from enterprise application teams
+                  </li>
+                  <li>
+                    Used technologies such as React (with Material UI design),
+                    MobX, MySQL and AWS serverless architecture to run this web
+                    application
+                  </li>
+                  <li>
+                    Worked towards improving the user experience by re-designing
+                    the single sign on (SSO) process, enhanced the code quality
+                    and reliability by implementing the test framework (react
+                    testing library)
+                  </li>
+                  <li>
+                    Implemented admin settings module for centrally configuring
+                    application wide settings and user authentication failure
+                    notification system
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  Senior Cloud Engineer @
+                  <a href="https://www.thomsonreuters.com/">Thomson Reuters</a>
+                </h4>
+                <h5>June, 2018 - October, 2021</h5>
+                <p><em> DivyaSree Technopolis, Bengaluru, India </em></p>
+                <ul>
+                  <li>
+                    Worked with Enterprise AWS Landing Zone team to implement
+                    enterprise specific cloud services
+                  </li>
+                  <li>
+                    Built RESTful APIs using Python with AWS serverless
+                    architecture (Lambda, API Gateway, Step Functions, DynamoDB
+                    etc.,) to provision AWS cloud access to application teams
+                    based on RBAC, ABAC policies of IAM
+                  </li>
+                  <li>
+                    Built a React dashboard to display centralized view of
+                    enterprise AWS accounts' information
+                  </li>
+                  <li>
+                    Designed and developed automated pipelines to bootstrap the
+                    AWS accounts with services which aided in enforcing central
+                    monitoring and logging systems
+                  </li>
+                  <li>
+                    Used CICD tools such as GitHub, CodeBuild, CodeDeploy,
+                    CodePipeline and Cloudformation to improve availability and
+                    reliability of services such as AWS Bastion, Hybrid DNS and
+                    AWS account inflation pipelines
+                  </li>
+                  <li>
+                    Hands on experience with setting up AWS cloud networking
+                    infrastructure comprising of VPCs, subnets, route tables,
+                    security groups, transit gateway, route53, EC2, launch
+                    templates, cloudwatch, cloudtrail, S3 etc.,
+                  </li>
+                  <li>
+                    Responsible for improving the landing zone service SLIs to
+                    match SLOs
+                  </li>
+                  <li>
+                    Developed automated workflows in ServiceNow to offer
+                    self-service
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  Intern @ <a href="https://www.ellucian.com/">Ellucian</a>
+                </h4>
+                <h5>January - April, 2018</h5>
+                <p><em> RMZ Ecoworld, Bengaluru, India </em></p>
+                <ul>
+                  <li>
+                    Worked with the cloud engineering team to learn corporate
+                    best practices and SDLC methods
+                  </li>
+                  <li>
+                    Practiced agile methodologies to develop a Java servlet
+                    application using selenium webdriver to display status of
+                    internal websites
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h3 class="resume-title">Side Projects</h3>
+              <div class="resume-item">
+                <h4>Food Lovers Database (FLDb)</h4>
+                <h5>Restaurant finder webapplication</h5>
+                <p>
+                  <em
+                    ><a href="https://foodloversdatabase.com"
+                      >https://foodloversdatabase.com</a
+                    ></em
+                  >
+                </p>
+                <ul>
+                  <li>
+                    Food Lovers Database(FLDb) is a collection of food Vlogs
+                    from
+                    <a
+                      href="https://www.youtube.com/channel/UC-Lq6oBPTgTXT_K-ylWL6hg"
+                      >Food Lovers TV</a
+                    >
+                    built using the MERN stack (MongoDB, ExpressJS, React and
+                    NodeJS) with usage of technologies such as TypeScript and
+                    NextJS
+                  </li>
+                  <li>
+                    This application helps users to find nearby restaurants that
+                    are reviewed by Food Lovers TV along with information such
+                    as restaurant ratings, operating hours, location, contact
+                    information etc.,
+                  </li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">About me</h3>
+              <div class="resume-item pb-0">
+                <h4>Goals and Hobbies</h4>
+                <p>
+                  <em
+                    >Technology enthusiast looking forward to learn techn stacks
+                    end-to-end</em
+                  >
+                </p>
+                <p>
+                  <em
+                    >Here is how i spend my off-working hours to achieve my
+                    goal</em
+                  >
+                </p>
+                <ul>
+                  <li>Udemy: Skill-up to achieve my goals</li>
+                  <li>
+                    Practice: Implement skills learnt by helping friends and
+                    acquaintances
+                  </li>
+                  <li>Gaming: My passion for computers started here</li>
+                  <li>
+                    Hiking & Gym: Helps me maintain my physical and mental
+                    stability
+                  </li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor's in Information Science Engineering</h4>
+                <h5>2014 - 2018</h5>
+                <p>
+                  <em
+                    ><a href="https://www.cmrit.ac.in/"
+                      >CMR Institute of Technology, Bengaluru, IND</a
+                    ></em
+                  >
+                </p>
+                <p>
+                  I received my formal degree in Information Science
+                  Engineering. I also held various positions during this time
+                  frame which taught me about team work and shouldering
+                  responsibility
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Pre - University College</h4>
+                <h5>2012 - 2014</h5>
+                <p>
+                  <em
+                    ><a href="http://sjpuc.in/"
+                      >St. Joseph's Pre - University college, Bengaluru, IND</a
+                    ></em
+                  >
+                </p>
+                <p>
+                  My foundation for computers and programming was laid here.
+                  With major subjects as Physics, Chemistry, Maths and Computer
+                  Science, I always score 95+ in my CS exams
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="assets/suresh_resume.pdf" download="suresh_resume.pdf">
+            <button type="submit" class="btn btn-primary center-block">
+              Download Resume
+            </button>
+          </a>
+        </div>
+      </section>
+      <!-- End Resume Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <p>I have learned that i still have to learn a lot</p>
+        <div class="social-links">
+          <a href="https://github.com/Mr-SKR" class="github" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/suresh-kumar-reddy/"
+            class="linkedin"
+            target="_blank"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/suresh.kumar.reddy/"
+            class="instagram"
+            target="_blank"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+        </div>
+        <div class="credits"></div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
